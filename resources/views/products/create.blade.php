@@ -24,6 +24,13 @@
                                 <div class="invalid-feedback">{{ $message }}</div>
                             @enderror
                         </div>
+                        <div class="mb-3">
+                            <label for="referentiel" class="form-label">Référentiel</label>
+                            <input type="text" class="form-control @error('referentiel') is-invalid @enderror" id="referentiel" name="referentiel" value="{{ old('referentiel') }}">
+                            @error('referentiel')
+                                <div class="invalid-feedback">{{ $message }}</div>
+                            @enderror
+                        </div>
                         
                         <div class="row">
                             <div class="col-md-6 mb-3">

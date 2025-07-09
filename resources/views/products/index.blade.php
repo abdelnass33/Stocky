@@ -18,6 +18,7 @@
                     <thead class="table-light">
                         <tr>
                             <th>Nom</th>
+                            <th>Référentiel</th>
                             <th>Prix unitaire</th>
                             <th>Quantité</th>
                             <th>Valeur totale</th>
@@ -39,6 +40,7 @@
                                         </div>
                                     </div>
                                 </td>
+                                <td>{{ $product->referentiel }}</td>
                                 <td>{{ number_format($product->price, 2, ',', ' ') }} €</td>
                                 <td>
                                     <span class="badge {{ $product->quantity == 0 ? 'bg-danger' : ($product->quantity < 5 ? 'bg-warning' : 'bg-success') }}">
