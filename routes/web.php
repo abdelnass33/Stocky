@@ -8,7 +8,7 @@ use App\Models\Product;
 Route::get('/', function () {
     $products = Product::all();
     return view('home', compact('products'));
-})->middleware(['auth', 'verified']);
+})->middleware(['auth', 'verified'])->name('home');
 
 Route::get('/dashboard', function () {
     return view('dashboard');
